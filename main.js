@@ -22,20 +22,22 @@ function sweetFromChris() {
 
 
 //let array = ['Haribo: 50', 'Lollipops: 120', 'Skittles: 302', 'Jelly Babies: 95']
-let sweets = [46, 46, 46, 46]
-let bootcampers = 46; 
+// let sweets = [46, 46, 46, 46]
+// let bootcampers = 46; 
 
 //function sweetsFromChris(total, number) {
   //  return total + number;
 
-   let numberOfSweets = sweets.reduce(function (acc, val) {
-        return acc + val;
-    },0)
-
-    function sweetsFromChris(){
+  
+  function sweetsFromChris(sweets, bootcampers){
+      let numberOfSweets = sweets.reduce(function (acc, val) {
+           return acc + val;
+       },0)
         if (numberOfSweets % bootcampers === 0) {
-        console.log('Happy days!! Thanks Chris!');
+        return 'Happy days!! Thanks Chris!';
     } else {
-        console.log("Aw man! That's not fair!");
+        return "Aw man! That's not fair!";
     }
 }
+
+module.exports = { sweetsFromChris };
